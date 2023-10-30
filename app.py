@@ -9,7 +9,7 @@ application = Flask(__name__)
 app = application
 
 tfvect = TfidfVectorizer(stop_words='english', max_df=0.7)
-loaded_model = pickle.load(open('model.pkl', 'rb'))
+loaded_model = pickle.load(open('fake_news.pkl', 'rb'))
 dataframe = pd.read_csv('news.csv')
 x = dataframe['text']
 y = dataframe['label']
